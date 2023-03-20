@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Libre Franklin', sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+#main-container {
+    width: 60%;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    margin-bottom: 1.875rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--gray);
+    font-weight: 300;
+    margin-bottom: 0.625rem;
+}
+
+.highlight {
+    color: var(--very-dark-blue);
+    font-weight: 600;
+}
+
+.description {
+    color: var(--very-dark-blue);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.875rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9375rem;
+    margin-bottom: 4.6875rem;
+    position: relative;
+}
+
+input {
+    width: 45%;
+    padding: 0.9375rem;
+    border: 0.0625rem solid var(--pale-blue);
+    outline: none;
+    border-radius: 3.125rem;
+}
+
+input:focus {
+    border: 0.0625rem solid var(--blue);
+}
+
+input::placeholder {
+    color: var(--pale-blue);
+}
+
+button {
+    width: 20%;
+    padding: 0.9375rem 0;
+    border: none;
+    outline: none;
+    background: var(--blue);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 3.125rem;
+    cursor: pointer;
+}
+
+.error-message {
+    position: absolute;
+    bottom: -45%;
+    left: 18%;
+    color: var(--light-red);
+    font-size: 0.875rem;
+    font-style: italic;
+
+    display: none;
+}
+
+.illustration-dashboard {
+    width: 60%;
+    margin-bottom: 3.125rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.social-icons a {
+    border: 0.0625rem solid var(--gray);
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    padding-top: 0.3125rem;
+    text-align: center;
+}
+
+.social-icons a i {
+    color: var(--blue);
+}
+
+.social-icons a:hover {
+    background: var(--blue);
+}
+
+.copyright {
+    color: var(--gray);
+    font-size: 0.875rem;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    input {
+        width: 65%;
+        font-size: 0.75rem;
+    }
+
+    button {
+        width: 35%;
+        font-size: 0.75rem;
+    }
+
+    .error-message {
+        font-size: 0.5rem;
+        bottom: -35%;
+        left: 2.5%;
+    }
+
+    .illustration-dashboard {
+        width: 100%;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (width: 280px) {
+    .title {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.75rem;
+    }
+
+    form {
+        gap: 0.4688rem;
+    }
+
+    input {
+        font-size: 0.5rem;
+    }
+
+    button {
+        font-size: 0.5rem;
+    }
+
+    .error-message {
+        font-size: 0.375rem;
+    }
+
+    .copyright {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .illustration-dashboard {
+        width: 70%;
+    }
+
+    .error-message {
+        font-size: 0.75rem;
+    }
+}
